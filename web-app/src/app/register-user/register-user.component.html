@@ -1,0 +1,138 @@
+<div class="col-3">
+	
+</div>
+<div class="col-6">
+	<div  class="form-register-user">
+		<form [formGroup]="profileForm"  (ngSubmit)="onFormSubmit()">
+		  	<div class="form-group">
+			  	<label for="firstName">Nombres:</label>
+			 	<input type="text" class="form-control" id="firstName" required  formControlName="first_Name" #_first_name >
+			 	<div *ngIf="profileForm.controls['first_Name'].invalid && (profileForm.controls['first_Name'].dirty || profileForm.controls['first_Name'].touched)" class="alert alert-danger">
+			 		<div *ngIf="profileForm.controls['first_Name'].errors.required">
+			 			Name is required
+			 		</div>
+			 		<div *ngIf="profileForm.controls['first_Name'].errors?.pattern">
+     					Number is not valid.
+					</div>  		
+			 	</div>
+		  	</div>
+
+		  	<div class="form-group">
+			  <label for="lastName">Apellidos:</label>
+			  <input  type="text" class="form-control" required formControlName="last_Name" 
+			   #_last_name>
+			  <div *ngIf="profileForm.controls['last_Name'].invalid && (profileForm.controls['last_Name'].dirty || profileForm.controls['last_Name'].touched)" 
+			  class="alert alert-danger">
+			  	<div *ngIf="profileForm.controls['last_Name'].errors.required">
+			 			Name is required
+			 		</div>
+			 		<div *ngIf="profileForm.controls['last_Name'].errors?.pattern">
+     					Number is not valid.
+					</div>  
+			  </div>
+			</div>
+
+			<div class="form-group">							
+			  <label for="type_of_document">Tipo de documento: </label>
+			  <select  class="form-control" required formControlName="type_of_document"  #_typ_of_doc> 
+			  	<option [value]="index" *ngFor="let index of type_of_doc">{{index}}</option>
+			  </select>
+			  <div *ngIf="profileForm.controls['type_of_document'].invalid && (profileForm.controls['type_of_document'].dirty || profileForm.controls['type_of_document'].touched)" 
+			  class="alert alert-danger">
+			  		tipo de documento is required
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="document">Documento: </label>
+			  	<input type="text" class="form-control" required formControlName="document"
+			  	#_document>
+			  	<div *ngIf="profileForm.controls['document'].invalid && (profileForm.controls['document'].dirty || profileForm.controls['document'].touched)" class="alert alert-danger">
+			  		<div *ngIf="profileForm.controls['document'].errors.required">
+			 			number is required
+			 		</div>	
+			 		<div *ngIf="profileForm.controls['document'].errors?.pattern">
+     					Number is required.
+					</div> 	 
+			 	</div>
+			</div>
+			<div class="form-group">
+				<label for="user"> User: </label>
+				<input  type="text" class="form-control" required formControlName="user" #_user>
+				<div *ngIf="profileForm.controls['user'].invalid && (profileForm.controls['user'].dirty || profileForm.controls['user'].touched)" 
+			  class="alert alert-danger">
+			  			<div *ngIf="profileForm.controls['user'].errors.required">
+			 			Name is required
+			 		</div>
+			 		<div *ngIf="profileForm.controls['user'].errors?.pattern">
+     					Number is not valid.
+					</div>  
+			  </div>
+			</div>
+
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" class="form-control" required formControlName="password"
+				#_password>
+				<div *ngIf="profileForm.controls['password'].invalid && (profileForm.controls['password'].dirty || profileForm.controls['password'].touched)" 
+			  class="alert alert-danger">
+			  	Password is required
+			  </div>
+			</div>
+
+			<div class="form-group">
+				<label for="confirm_password">Confirm Password</label>
+				<input type="password" class="form-control" required formControlName="confirm_password"
+				#_confir_password>
+				<div *ngIf="profileForm.controls['confirm_password'].invalid && (profileForm.controls['confirm_password'].dirty || profileForm.controls['confirm_password'].touched)" 
+			  class="alert alert-danger">
+			  	Confirm password is required
+			  </div>
+			</div>
+		  	<div class="form-group">
+		  		<label for="are_you_sure">Are you sure</label>
+		  		<input type="checkbox" class="form-control" required formControlName="are_you_sure" 
+		  		#_are_you_sure>
+		  		<div *ngIf="profileForm.controls['are_you_sure'].invalid && (profileForm.controls['are_you_sure'].dirty || profileForm.controls['are_you_sure'].touched)" 
+			  class="alert alert-danger">
+				  	Chechbox is required
+			  	</div>
+		  	</div>
+		  	
+
+			<h3>Resumen de datos</h3>
+			<p>Nombres: {{daf.first_Name}}</p>
+				<p>Apellidos : {{daf.last_Name}}</p>
+				<p>Tipo de documento : {{daf.typ_of_doc}}</p>
+				<p>Documento : {{daf.document}}</p>
+				<p>User : {{daf.user}}</p>
+				<p>Password : {{daf.password}}</p>
+				<p>Confirm Password :  {{daf.confirm_password}}
+				<p>Are you sure : {{daf.are_you_sure}}
+			<div class="button-row">
+				<button type="submit" [disabled]="!profileForm.valid" color="primary">save
+			</button>
+			</div>
+		</form>
+	</div>
+	<div>
+	</div>
+</div>
+<div class="col-3">
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

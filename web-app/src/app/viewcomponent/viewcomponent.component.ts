@@ -12,4 +12,7 @@ export class ViewcomponentComponent implements OnInit {
   ngOnInit() {
   }
 
+ title = 'web-app';
+  heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado', 'Windstorm', 'Bombasto', 'Magneta', 'Tornado', 'Windstorm', 'Bombasto'];
+
 }

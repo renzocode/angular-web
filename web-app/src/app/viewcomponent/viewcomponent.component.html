@@ -1,1 +1,72 @@
-<p>viewcomponent works!</p>
+<div class="table-main" style=" text-align: center; margin-top: 40px; 
+    margin-left: 100px; margin-right: 20px;">
+
+    <div class="row" style="margin-right: 30px; margin-right: 0px;">
+      <ng-container *ngFor="let hero of heroes ; let i = index">
+      <div class="col photos-col">
+         <div class="card" style="width: 13rem;">
+          <div class="container">
+            <div class="row">
+              <div class="col-8" style="padding-left: 0px; padding-right: 0px; text-align: center; padding-top: 20px;" >
+                <img src="assets/images/renzo.jpg" class="card-img-top" alt="..." style="border-radius: 100%; width: 60%; margin-left: 30px; ">
+                <h5 class="card-title" style="font-size: 0.8rem !important; margin-left: 20px; text-decoration: underline;">Enzo</h5>
+              </div>
+              <div class="col-4" style="margin-top: 10px; text-align: left; padding-left: 0px; padding-right: 0px; text-align: right; padding-right: 10px;">
+                <div>
+                  <img src="assets/images/peru.svg" class="card-img-top" alt="..." style="width: 40%;" />     
+                  <p style="font-size: .5rem;">Perú</p>
+                </div>
+                <div style="text-align: left;">
+                  <span class="fa fa-star checked"><a style="color: #cc8b49; font-size: .7rem;">4.2</a>
+                   </span>
+                    <a style="font-size: .5rem; color: #ada8a5;">(50)</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body" style="padding-left: 0.5rem; padding-right: 0.5rem; padding-top: 0.1rem; padding-bottom: 0.1rem;">
+            <p class="card-text" style="font-size: 0.7rem !important; text-align: left;">Some quick example text to build on the card title and make up.</p>
+            <div class="dropdown-divider"></div>
+            <div class="container">
+              <div class="row">
+                <div class="col-3" style="padding-right: 1px; padding-left: 1px;">
+                  <nav class="navbar navbar-light navbar-1 white" style="padding : .2rem 1rem !important;">
+                      <!-- Collapse button -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+                          aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation" style="border-color: #fff;"><span class="navbar-toggler-icon"></span></button>
+
+                          <!-- Collapsible content -->
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+
+                            <!-- Links -->
+                            <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Features</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Pricing</a>
+                              </li>
+                            </ul>
+                            <!-- Links -->
+                          </div>
+                      <!-- Collapsible content -->
+                      </nav> 
+                </div>
+                <div class="col-3" style="padding-left: 0px !important; padding-right: 0px !important; text-align: left; padding-top: 4px; ">
+                      <img src="assets/images/like.svg" class="card-img-top" alt="..." style="border-radius: 10%;  width: 30%;">  
+                </div>
+                <div class="col-6" style="padding-right: 0px !important; padding-left: 0px !important; padding-top: 4px; text-align: right;">
+                  <a href="" style="font-size: 0.7rem;">ver más...</a>
+                </div>
+              </div>
+            </div>                      
+          </div>
+        </div> 
+      </div>
+      </ng-container>
+    </div>
+   
+  </div>
